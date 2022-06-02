@@ -14,8 +14,37 @@ public class CalculatorController {
      */
     @RequestMapping("/sum")
     public int sum (
-            @RequestParam(name = "x") int a,
+            @RequestParam int a,
             @RequestParam int b){
         return a + b;
+    }
+    @RequestMapping("/difference")
+    public int difference (
+            @RequestParam int a,
+            @RequestParam int b){
+        return a - b;
+    }
+    @RequestMapping("/multiplication")
+    public int multiply (
+            @RequestParam int a,
+            @RequestParam int b){
+        return a * b;
+    }
+    @RequestMapping("/division")
+    public int divide (
+            @RequestParam int a,
+            @RequestParam int b){
+        return a/b;
+    }
+    @RequestMapping("/exp")
+    public double exp (
+            @RequestParam double a,
+            @RequestParam double b){
+        return Math.pow(a, b);
+    }
+    @RequestMapping("/absolut")
+    public int absolut (
+            @RequestParam int a){
+        return Math.abs(a);
     }
 }
