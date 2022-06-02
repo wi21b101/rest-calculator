@@ -47,4 +47,9 @@ public class CalculatorController {
             @RequestParam int a){
         return Math.abs(a);
     }
+    @RequestMapping("/sqrt")
+    public double sqrt (
+            @RequestParam double a){
+        return Math.sqrt(a);
+    }
 }
